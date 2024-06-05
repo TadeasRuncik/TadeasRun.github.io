@@ -1,0 +1,240 @@
+body {
+  background-color: #212121;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+@media (max-width: 600px) {
+.nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+.nav-links a {
+    padding: 10px;
+    text-align: left;
+}
+.menu-toggle {
+    display: block;
+}
+
+.card {
+    margin: 10px auto; /* Center cards */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#content {
+    flex-direction: column;
+}
+
+.menu-links {
+    display: none; /* Skryjeme odkazy menu na menších obrazovkách */
+    flex-direction: column;
+}
+
+.menu-links a {
+    display: block;
+    text-align: center;
+}
+}
+
+.menu-toggle {
+display: none; /* Skryjeme tlačítko na větších obrazovkách */
+}
+
+.menu-links {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.menu-links a {
+color: #54a6da;
+text-decoration: none;
+padding: 14px 20px;
+font-size: 18px;
+transition: background-color 0.3s ease;
+}
+
+button {
+  background-color: #54a6da;
+  color: #fff;
+  border-radius: 10%;
+}
+
+#content {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#fortniteImg {
+  max-width: 40%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.obrazek {
+  width: 150px;
+}
+
+@font-face {
+  font-family: myFont;
+  src: url(fontos.ttf);
+}
+
+h1 {
+  color: white;
+  font-size: 60px;
+  margin: 0;
+  font-family: myFont;
+}
+
+h4 {
+  color: #54a6da;
+  font-size: 24px;
+  margin: 0;
+}
+
+h3 {
+  text-align: center;
+  color: #54a6da;
+  font-family: Helvetica, sans-serif;
+}
+
+p {
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* volitelné: rovnoměrně rozdělit karty ve směru osy X */
+  gap: 20px; /* mezera mezi kartami */
+}
+.card {
+  width: calc(33.33% - 20px); /* tři karty na řádek (s mezí mezi kartami) */
+  /* volitelné: přizpůsobit šířku karet podle potřeby */
+}
+
+/* CSS */
+.button-27 {
+  appearance: none;
+  background-color: #212121;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 20%;
+  will-change: transform;
+  align-items: center;
+  }
+  
+  .button-27:disabled {
+  pointer-events: none;
+  }
+  
+  .button-27:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+  }
+  
+  .button-27:active {
+  box-shadow: none;
+  transform: translateY(0);
+  }
+  
+  #nadpis {
+    text-align: center;
+    font-family: Arial, sans-serif; 
+  }
+
+.card {
+  position: relative;
+  width: 190px;
+  height: 254px;
+  background-color: #212121;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  float: left; /* Zarovnání karet vedle sebe */
+  margin: 2.5%;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -5px;
+  margin: auto;
+  width: 200px;
+  height: 264px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.card:hover::after {
+  filter: blur(30px);
+}
+
+.card:hover::before {
+  transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kviz</title>
+    <link rel="stylesheet" href="styleQuiez.css">
+    <link rel="icon" type="image/x-icon" href="Bez názvu.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Fortnite Kvíz</h1>
+        <div class="question" id="question"></div>
+        <div class="options" id="options"></div>
+        <div id="score"></div>
+        <button onclick="openPage('hlavni.html')" >Domů🏠 </button>
+    </div>
+
+<!--
+        1) Jaká společnost vytvořila Fortnite a) Supercell b) Epic games c) Microsoft
+        2) Jak se toto nazývá autobus, kterým letíte na začátku hry? a) Battle Bus b) Starting Bus c) Battle Air
+        3) Jak se nazývá měna ve Fortnite? a) v-bucks b) coins c) roubux
+        4) Kolik shieldu přidá jeden big shield a) 25 b) 100 c) 50
+        5) Jak se nazývá tato lokace a) Loot lake b) Tilted Towers c) plesent park
+        6) Jak se nazývá tato zbraň a) scar b) pumpa c) sniper
+        7) Kolik stojí battle pass a) 950vb b) 900vb c) 1000
+        8) Kdy vznikl Fornite a) Březen 2017 b) Říjen 2020 c) Březen 2015
+        9) Jak se nazývá tento předmět a) medkit b) megakid c) first aid kit
+        10) Je Fortnite zdarma? a) ano b) ne c) nevím
+-->
+
+        <script>
+            function openPage(pageUrl) {
+                window.location.href = pageUrl;
+            }
+        </script>
+
+        <script>
+        const questions = [
+            {
+                question: "Jaká společnost vytvořila Fortnite?",
+                options: ["Supercell", "Epic games", " Microsoft"],
+                answer: "Epic games"
+            },
+            {
+                question: "Jak se toto nazývá autobus, kterým letíte na začátku hry?",
+                options: ["Battle Bus", "Starting Bus", "Battle Air"],
+                answer: "Battle Bus"
+            },
+            {
+                question: "Jak se nazývá měna ve Fortnite?",
+                options: [" v-bucks", " coins", "roubux"],
+                answer: " v-bucks"
+            },
+            {
+                question: "Kolik shieldu přidá jeden big shield?",
+                options: ["100", "50", "25"],
+                answer: "50"
+            },
+            {
+                question: "Kolik stojí battle pass ?",
+                options: ["1000", "950", "900"],
+                answer: "950"
+            },
+            {
+                question: "Kdy vznikl Fornite?",
+                options: ["březen 2017", "únor 2016", "duben 2018"],
+                answer: "březen 2017"
+            },
+            {
+                question: "Je Fortnite zdarma?",
+                options: ["ano", "ne"],
+                answer: "ano"
+            },
+            {
+                question: "Kolik hráčů je v normálním modu battle royale?",
+                options: ["50", "80","100"],
+                answer: "100"
+            },
+            {
+                question: "Jakou barvu má  legendární rarita?",
+                options: ["zelená", "žlutá/zlatá","fialová"],
+                answer: "žlutá/zlatá"
+            },
+            {
+                question: "Jak se nazývá lékárnička?",
+                options: ["mega-kit", "first aid kit","med-kit"],
+                answer: "med-kit"
+            }
+
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        const questionElement = document.getElementById('question');
+        const optionsElement = document.getElementById('options');
+        const scoreElement = document.getElementById('score');
+
+        function displayQuestion() {
+            const currentQuestion = questions[currentQuestionIndex];
+            questionElement.textContent = currentQuestion.question;
+            optionsElement.innerHTML = '';
+
+            currentQuestion.options.forEach((option, index) => {
+                const button = document.createElement('button');
+                button.textContent = option;
+                button.addEventListener('click', () => checkAnswer(option));
+                optionsElement.appendChild(button);
+            });
+        }
+
+        function checkAnswer(selectedOption) {
+            const currentQuestion = questions[currentQuestionIndex];
+            if (selectedOption === currentQuestion.answer) {
+                score++;
+            }
+
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < questions.length) {
+                displayQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            questionElement.textContent = 'Konec kvízu!';
+            optionsElement.innerHTML = '';
+            scoreElement.textContent = `Vaše skore: ${score} / ${questions.length}`;
+        }
+
+        displayQuestion();
+    </script>
+</body>
+</html>

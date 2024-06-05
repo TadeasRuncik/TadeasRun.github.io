@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moje nejoblíbenější hra</title>
+  <link rel="stylesheet" href="styleHlavni.css">
+  <link rel="icon" type="image/x-icon" href="Bez názvu.png">
+  <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav>
+    <ul id="menuList">
+      <li><a href="index.html">Domů</a></li>
+      <li><a href="skiny.html">Skiny</a></li>
+      <li><a href="historie.html">Historie</a></li>
+      <li><a href="Lokace.html">Lokace</a></li>
+      <li><a href="kvíz.html">Kvíz</a></li>
+      <li><a href="form.html">Kontakt</a></li>
+      <li><a href="zdroje.html">Zdroje</a></li>
+    </ul>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fa fa-bars"></i>
+    </div>
+  </nav>
+
+  <script>
+    let menuList = document.getElementById("menuList");
+    menuList.style.maxHeight = "0px";
+
+    function toggleMenu() {
+      if (menuList.style.maxHeight == "0px") {
+        menuList.style.maxHeight = "300px";
+      } else {
+        menuList.style.maxHeight = "0px";
+      }
+    }
+  </script>
+
+  <div id="content">
+    <div>
+      <h1>Fortnite</h1>
+      <h4>Moje nejoblíbenější hra</h4>
+    </div>
+    <img id="fortniteImg" src="Polar_Peely_29_-_Outfit_-_Fortnite.webp" alt="Fortnite Image">
+  </div>
+  <hr>
+
+  <div class="container">
+    <div class="card">
+      <img src="fortnite-switch-1527812947830_160w.jpg" alt="Obrázek 1">
+      <div class="card-content">
+        <h2>Historie</h2>
+        <p>V této sekci se dozvíte něco o historii a vývoji mapy. Od původně první mapy až po 3. kapitolu. Každá kapitola přinášela nové lokace, události a příběhy, které ovlivnily hru. Prozkoumejte, jak se svět Fortnite měnil a vyvíjel během let.</p>
+        <button onclick="location.href='historie.html'">Více</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="H2.webp" alt="Obrázek 1">
+      <div class="card-content">
+        <h2>Skiny</h2>
+        <p>Fortnite je známý pro své rozmanité a kreativní skiny. Od ikonických hrdinů a záporáků až po unikátní originální postavy. V této sekci najdete galerii nejoblíbenějších skinů, které hru definovaly a stále definují. Objevte, jaké skiny jsou k dispozici a které z nich jsou nejvzácnější.</p>
+        <button onclick="location.href='skiny.html'">Více</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="2019-10-15-14_02_37-Fortnite.jpg" alt="Obrázek 1">
+      <div class="card-content">
+        <h2>Lokace</h2>
+        <p>Mapa Fortnite je plná ikonických míst. Od rušných měst po tajemné lesy a opuštěné továrny. Každá lokace má svůj příběh a význam. V této sekci se můžete podívat na přehled všech důležitých lokací, které jste mohli během hraní navštívit. Od začátku hry až po současnost, zjistěte, jaké lokace byly a jsou klíčové pro hru.</p>
+        <button onclick="location.href='Lokace.html'">Více</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #212121;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .card {
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1 1 calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  .card img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+
+  .card h2 {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+    color: #54a6da;
+  }
+
+  .card p {
+    font-size: 1em;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      flex: 1 1 100%;
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #333;
+    height: 70px;
+    position: relative;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    list-style-type: none;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #54a6da;
+    position: relative;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #f0f0f0;
+  }
+  
+  nav ul li a:hover::before {
+    background-color: #54a6da;
+  }
+  
+  .menu-icon {
+    position: absolute;
+    right: 30px;
+    display: none;
+    cursor: pointer;
+  }
+  
+  .menu-icon i {
+    color: #fff;
+    font-size: 30px;
+  }
+
+  
+  
+  @media (max-width: 600px) {
+    nav {
+      justify-content: space-between;
+      padding: 0 30px;
+    }
+    nav ul {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      text-align: center;
+      background: #333;
+      gap: 0;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.5s ease;
+    }
+    nav ul li {
+      padding: 20px;
+      padding-top: 0;
+    }
+    .menu-icon {
+      display: block;
+    }
+    #menuList.active {
+      max-height: 300px; /* Adjust based on your content */
+    }
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+  
+  .col-1 { width: 20%; }
+  .col-2 { width: 40%; }
+  .col-3 { width: 60%; }
+  .col-4 { width: 80%; }
+  .col-5 { width: 100%; }
+  
+  @media only screen and (max-width: 600px) {
+    [class*="col-"] {
+      width: 100%;
+    }
+  }
+  
+  @font-face {
+    font-family: myFont;
+    src: url(fontos.ttf);
+  }
+  
+  h1 {
+    color: white;
+    font-size: 60px;
+    margin: 0;
+    font-family: myFont;
+  }
+
+h3{
+  color: #fff;
+  font-size: 35px;
+}
+
+  #fortniteImg {
+    max-width: 40%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .obrazek {
+    width: 150px;
+  }
+  
+
+  #content {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+/* CSS */
+.button-27 {
+  appearance: none;
+  background-color: #212121;
+  border: 2px solid #54a6da;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #54a6da;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 20%;
+  will-change: transform;
+  align-items: center;
+  }
+  
+  .button-27:disabled {
+  pointer-events: none;
+  }
+  
+  .button-27:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+  }
+  
+  .button-27:active {
+  box-shadow: none;
+  transform: translateY(0);
+  }
+  
+  #nadpis {
+    text-align: center;
+    font-family: Arial, sans-serif; 
+  }
+
+  li{
+    color: #fff;
+  }
+  
+  .odkazy{
+    color: #54a6da;
+  }
+
+  #popis{
+    color: #fff;
+  }

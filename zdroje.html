@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StylUniversal.css">
+    <title>Zdroje</title>
+</head>
+<body>
+    <nav>
+        <ul id="menuList">
+          <li><a href="index.html">Domů</a></li>
+          <li><a href="skiny.html">Skiny</a></li>
+          <li><a href="historie.html">Historie</a></li>
+          <li><a href="Lokace.html">Lokace</a></li>
+          <li><a href="kvíz.html">Kvíz</a></li>
+          <li><a href="form.html">Kontakt</a></li>
+          <li><a href="zdroje.html">Zdroje</a></li>
+        </ul>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+    </nav>
+    
+    
+        <script>
+            let menuList = document.getElementById("menuList");
+            menuList.style.maxHeight = "0px";
+    
+            function toggleMenu() {
+                if (menuList.style.maxHeight == "0px") {
+                    menuList.style.maxHeight = "300px";
+                } else {
+                    menuList.style.maxHeight = "0px";
+                }
+            }
+        </script>
+        <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+    
+        <center><h1 class="title">Zdroje</h1></center>
+        
+        <p id="popis">Celý tento web slouží jako pololetní projekt a neslouží ke komerčním službám</p>
+
+        <!--<h3>-Skiny</h3>
+        <h3>-Historie</h3>
+        <h3>-Lokace</h3>-->
+        <h3>Domovská stránka</h3>
+        <ul>
+            <li><a class="odkazy"  href="https://www.cgmagonline.com/guides/what-are-the-rarest-fortnite-skins-2023/">https://www.cgmagonline.com/guides/what-are-the-rarest-fortnite-skins-2023/</a></li>
+            <li><a class="odkazy" href="https://www.pcgamesn.com/fortnite/named-locations">https://www.pcgamesn.com/fortnite/named-locations</a></li>
+            <li><a class="odkazy"  href="https://cz.ign.com/fortnite/8373/news/fortnite-se-docka-prvni-casti-kampane">https://cz.ign.com/fortnite/8373/news/fortnite-se-docka-prvni-casti-kampane</a></li>
+            <li><a  class="odkazy" href="https://fortnite.fandom.com/wiki/Polar_Peely">https://fortnite.fandom.com/wiki/Polar_Peely</a></li>
+        </ul>
+        <h3>Skiny</h3>
+        <ul>
+            <li>Všchny obrázky jsou čerpány z :<a class="odkazy"  href="https://fortnite.fandom.com/wiki/Fortnite_Wiki">https://fortnite.fandom.com/wiki/Fortnite_Wiki</a></li>
+
+        </ul>
+        <h3>Historie</h3>
+        <ul>
+            <li>Všchny obrázky jsou čerpány z :<a class="odkazy"  href="https://fortnite-archive.fandom.com/wiki/Battle_Royale_Map/History">https://fortnite-archive.fandom.com/wiki/Battle_Royale_Map/History</a></li>
+
+        </ul>
+        <h3>Lokace</h3>
+        <ul>
+            <li>Všchny obrázky jsou čerpány z :<a class="odkazy" href="https://fortnite.fandom.com/wiki/Named_Locations">https://fortnite.fandom.com/wiki/Named_Locations</a></li>
+        </ul>
+    
+</body>
+</html>
